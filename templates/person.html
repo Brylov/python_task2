@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ person.name }}</title>
+</head>
+<body>
+    <!-- Conditionals -->
+    {% if person.city == "Paris"%}
+        <h2>You Are not from our city</h2>
+    {% else %}
+        <h3>Person Name is: {{ person.name }}</h3>
+        <h3>Person Age is: {{ person.age }}</h3>
+        <h3>Kids:</h3>
+        <ul>
+        {% for kid in person.kidsName %}
+            <li style="color:blue">{{ kid }}</li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>
